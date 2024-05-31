@@ -1,73 +1,139 @@
-{"intents": [
-    {"tag": "greeting",
-     "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
-     "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
-     "context": [""]
-    },
-    {"tag": "goodbye",
-     "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
-     "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
-     "context": [""]
-    },
-    {"tag": "thanks",
-     "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
-     "responses": ["Happy to help!", "Any time!", "My pleasure"],
-     "context": [""]
-    },
-    {"tag": "noanswer",
-     "patterns": [],
-     "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
-     "context": [""]
-    },
-    {"tag": "options",
-     "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
-     "responses": ["I can guide you through Adverse drug reaction list, Blood pressure tracking, Hospitals and Pharmacies", "Offering support for Adverse drug reaction, Blood pressure, Hospitals and Pharmacies"],
-     "context": [""]
-    },
-    {"tag": "adverse_drug",
-     "patterns": ["How to check Adverse drug reaction?", "Open adverse drugs module", "Give me a list of drugs causing adverse behavior", "List all drugs suitable for patient with adverse reaction", "Which drugs dont have adverse reaction?" ],
-     "responses": ["Navigating to Adverse drug reaction module"],
-     "context": [""]
-    },
-    {"tag": "blood_pressure",
-     "patterns": ["Open blood pressure module", "Task related to blood pressure", "Blood pressure data entry", "I want to log blood pressure results", "Blood pressure data management" ],
-     "responses": ["Navigating to Blood Pressure module"],
-     "context": [""]
-    },
-    {"tag": "blood_pressure_search",
-     "patterns": ["I want to search for blood pressure result history", "Blood pressure for patient", "Load patient blood pressure result", "Show blood pressure results for patient", "Find blood pressure results by ID" ],
-     "responses": ["Please provide Patient ID", "Patient ID?"],
-     "context": ["search_blood_pressure_by_patient_id"]
-    },
-    {"tag": "search_blood_pressure_by_patient_id",
-     "patterns": [],
-     "responses": ["Loading Blood pressure result for Patient"],
-     "context": [""]
-    },
-    {"tag": "pharmacy_search",
-     "patterns": ["Find me a pharmacy", "Find pharmacy", "List of pharmacies nearby", "Locate pharmacy", "Search pharmacy" ],
-     "responses": ["Please provide pharmacy name"],
-     "context": ["search_pharmacy_by_name"]
-    },
-    {"tag": "search_pharmacy_by_name",
-     "patterns": [],
-     "responses": ["Loading pharmacy details"],
-     "context": [""]
-    },
-    {"tag": "hospital_search",
-     "patterns": ["Lookup for hospital", "Searching for hospital to transfer patient", "I want to search hospital data", "Hospital lookup for patient", "Looking up hospital details" ],
-     "responses": ["Please provide hospital name or location"],
-     "context": ["search_hospital_by_params"]
-    },
-    {"tag": "search_hospital_by_params",
-     "patterns": [],
-     "responses": ["Please provide hospital type"],
-     "context": ["search_hospital_by_type"]
-    },
-    {"tag": "search_hospital_by_type",
-     "patterns": [],
-     "responses": ["Loading hospital details"],
-     "context": [""]
-    }
-]
-}
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": ["Hi", "Hello", "Hey"],
+        "responses": ["Hello! How can I help you today?", "Hi there! What can I assist you with?", "Hey! What brings you here?"],
+        "context": ["general"]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["Bye", "Goodbye", "See you later"],
+        "responses": ["Goodbye! Take care.", "See you later! Have a great day.", "Bye! Don't hesitate to return if you have more questions."],
+        "context": ["general"]
+      },
+
+      {
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "Appreciate it"],
+        "responses": ["You're welcome!", "Happy to help!", "Anytime!"],
+        "context": ["general"]
+      },
+      {
+        "tag": "fallback",
+        "patterns": [],
+        "responses": ["I'm sorry, I'm not sure I understand. Could you please rephrase or ask a different question?"],
+        "context": ["general"]
+      },
+      {
+        "tag": "schizophrenia_intro",
+        "patterns": ["What is schizophrenia?", "Tell me about schizophrenia", "What do you know about schizophrenia?"],
+        "responses": ["Schizophrenia is a complex mental illness that affects how a person thinks, feels, behaves, and relates to others. The illness occurs in both men and women, but it is slightly more common in men. The first episode typically occurs in the late teens to early twenties—usually earlier for men than for women. People can also develop the illness later in life. As many as one person out of 100 may experience schizophrenia."],
+        "context": ["general"]
+      },
+      {
+        "tag": "schizophrenia_symptoms",
+        "patterns": ["What are the symptoms of schizophrenia?", "What are the signs of schizophrenia?"],
+        "responses": ["Schizophrenia includes “positive” and “negative” symptoms of psychosis, as well as cognitive symptoms. Positive symptoms are those that add to or distort the person’s normal functioning. Negative symptoms involve normal functioning becoming lost or reduced. Cognitive symptoms include difficulties with attention, concentration, and memory."],
+        "context": ["general"]
+      },
+      {
+        "tag": "schizophrenia_causes",
+        "patterns": ["What causes schizophrenia?", "Why do people get schizophrenia?"],
+        "responses": ["It is not known for certain what causes schizophrenia, but like most other mental health problems, researchers believe that a combination of biological and environmental factors contribute to its development. Research has shown that: The risk is higher when a close family member has the illness. Schizophrenia may be influenced by brain development factors before and around the time of birth, and during childhood and adolescence. People who have experienced social hardship or trauma, particularly during childhood, have a higher risk. Cannabis use increases the risk of developing schizophrenia in youth and of triggering an earlier onset of the illness in people who are genetically vulnerable. Being born or spending one’s childhood in an urban environment, rather than a rural one, increases the risk. Particular immigrant and refugee groups in Ontario may have a higher risk of developing psychotic disorders such as schizophrenia. Exactly how these risk factors interact to cause schizophrenia is not yet fully understood."],
+        "context": ["general"]
+      },
+      {
+        "tag": "schizophrenia_diagnosis",
+        "patterns": ["How is schizophrenia diagnosed?", "What is the process for diagnosing schizophrenia?"],
+        "responses": ["To arrive at a diagnosis, a physician or psychologist asks structured questions about how the person is thinking and behaving (an assessment). The clinician may also gather information from family members or others who are familiar with the person’s history. A diagnosis of schizophrenia is based on: the information gathered, ruling out other possible explanations, the physician or psychologist’s clinical judgment, certain symptoms, described above, that have been present for at least one month and last for at least six months, symptoms that are severe enough to have an impact on the person’s social, educational, or occupational functioning and abilities. Research has shown that the earlier a person can get a correct diagnosis and treatment for schizophrenia, the better the long-term outcome."],
+        "context": ["general"]
+      },
+      {
+        "tag": "schizophrenia_treatment",
+        "patterns": ["How is schizophrenia treated?", "What are the treatments for schizophrenia?"],
+        "responses": ["Medication is often the first treatment for schizophrenia. The main medications used to treat symptoms of schizophrenia are antipsychotics. They may be used in combination with medications for other mental health symptoms, such as mood stabilizers, sedatives, and antidepressants, and medications to help with the side-effects of antipsychotics. Brain stimulation therapies may also sometimes be used. They include electroconvulsive therapy and transcranial magnetic stimulation. Psychosocial therapies and supports help people to develop recovery skills, such as setting and achieving goals. They include psychoeducation, cognitive-behavioural therapy, cognitive adaptation training, concurrent disorders treatment, and family therapy and supports. Other forms of treatment for schizophrenia include peer support, medical care, physical activity, diet, and complementary approaches. People with schizophrenia may need to be admitted to hospital at times—for example, if a person is aggressive or suicidal or is not looking after their own basic needs. Patients may be admitted voluntarily or, in certain risk situations, involuntarily. A typical hospital stay may last between a few days and several weeks. During this time, goals and plans for treatment and recovery will be identified. When the person returns home, intensive and community supports may be available, if needed. These can help the person to make the transition back to the community and provide ongoing support. The way we think of schizophrenia has changed over time. Where once it was viewed as a chronic and deteriorating condition requiring lifelong care, now recovery is considered to be a realistic possibility. Recovery is seen as a process of gaining control over one’s life and finding meaning, rather than as the total absence of symptoms."],
+        "context": ["general"]
+      },
+      {
+        "tag": "persistent_delusions",
+        "patterns": ["I start seeing people at home that appear out of nowhere and then disappear"],
+        "responses": ["It sounds like you may be experiencing persistent delusions, which are fixed beliefs that something is true despite evidence to the contrary. It's important to discuss these experiences with a mental health professional for further evaluation and support."],
+        "context": ["general"]
+      },
+      {
+        "tag": "persistent_hallucinations",
+        "patterns": ["I hear voices when no one is around"],
+        "responses": ["It seems like you're experiencing persistent hallucinations, which involve perceiving things that aren't actually there. It's important to seek help from a mental health professional to explore these experiences further and develop a plan for support."],
+        "context": ["general"]
+      },
+      {
+        "tag": "control_passivity",
+        "patterns": ["I feel like my thoughts are being controlled by someone else"],
+        "responses": ["It sounds like you're experiencing feelings of influence, control, or passivity, where you feel that your thoughts or actions are being influenced by external forces. It's crucial to talk to a mental health professional about these experiences for proper evaluation and support."],
+        "context": ["general"]
+      },
+      {
+        "tag": "disorganized_thinking",
+        "patterns": ["My thoughts feel jumbled and disconnected"],
+        "responses": ["It sounds like you may be experiencing disorganized thinking, where your thoughts may appear jumbled or irrelevant. This can be a symptom of schizophrenia and should be discussed with a mental health professional for further evaluation and support."],
+        "context": ["general"]
+      },
+      {
+        "tag": "disorganized_behavior",
+        "patterns": ["I've been acting in bizarre ways recently"],
+        "responses": ["It seems like you're describing highly disorganized behavior, where actions may seem bizarre or purposeless. This can be a symptom of schizophrenia and should be addressed with a mental health professional for evaluation and support."],
+        "context": ["general"]
+      },
+      {
+        "tag": "negative_symptoms",
+        "patterns": ["I feel emotionally disconnected and withdrawn"],
+        "responses": ["It sounds like you may be experiencing negative symptoms of schizophrenia, such as social withdrawal and restricted expression of emotions. It's essential to seek support from a mental health professional to explore these symptoms further."],
+        "context": ["general"]
+      },
+      {
+        "tag": "extreme_agitation",
+        "patterns": ["I feel extremely agitated and restless"],
+        "responses": ["It sounds like you're experiencing extreme agitation, which can be a symptom of schizophrenia. It's important to reach out to a mental health professional for evaluation and support to manage these feelings effectively."],
+        "context": ["general"]
+      },
+      {
+        "tag": "remission",
+        "patterns": ["Is it possible for schizophrenia symptoms to go away completely?"],
+        "responses": ["Yes, at least one third of people with schizophrenia experience complete remission of symptoms. However, it's essential to work closely with a mental health professional to manage symptoms effectively and maintain overall well-being."],
+        "context": ["general"]
+      },
+      
+      {
+        "tag": "prevalence",
+        "patterns": ["prevalence of schizophrenia"],
+        "responses": ["Schizophrenia affects approximately 24 million people worldwide, about 1 in 300 people (0.32%).", "Among adults, the rate is 1 in 222 people (0.45%)."],
+        "context": ["general"]
+      },
+      {
+        "tag": "impact",
+        "patterns": ["impact of schizophrenia"],
+        "responses": ["Schizophrenia often causes significant distress and impairment in personal, family, and social life.", "It can also affect educational and occupational functioning."],
+        "context": ["general"]
+      },
+      {
+        "tag": "health_risks",
+        "patterns": ["health risks of schizophrenia"],
+        "responses": ["People with schizophrenia are 2 to 3 times more likely to die early due to physical illnesses like cardiovascular and metabolic diseases.", "They are also at higher risk of infectious diseases."],
+        "context": ["general"]
+      },
+      {
+        "tag": "societal_treatment",
+        "patterns": ["treatment of individuals with schizophrenia by society"],
+        "responses": ["Stigma against people with schizophrenia is intense and widespread, leading to social exclusion.", "This stigma contributes to discrimination, limiting access to healthcare, education, housing, and employment."],
+        "context": ["general"]
+      },
+      {
+        "tag": "emergencies",
+        "patterns": ["challenges of schizophrenia during emergencies"],
+        "responses": ["During emergencies, individuals with schizophrenia may face extreme stress, isolation, and disruption of healthcare services and medication supply.", "These changes can exacerbate existing symptoms and make individuals more vulnerable to human rights violations."],
+        "context": ["general"]
+      }
+    ]
+  }
+  

@@ -11,11 +11,11 @@ from keras.optimizers import SGD
 import random
 
 
-# nltk.download('wordnet')
-
 words=[]
 classes = []
 documents = []
+
+#todo: modify stop_words
 ignore_words = ['?', '!']
 data_file = open('data.json').read()
 intents = json.loads(data_file)
