@@ -1,22 +1,27 @@
 import nltk
-from nltk.stem import WordNetLemmatizer
-lemmatizer = WordNetLemmatizer()
 import json
 import pickle
-
+import random
 import numpy as np
+import string
+
 from keras.models import Sequential
 from keras.layers import Dense, Activation, Dropout
 from keras.optimizers import SGD
-import random
+from nltk.stem import WordNetLemmatizer
+from utils import util
 
+lemmatizer = WordNetLemmatizer()
 
 words=[]
 classes = []
 documents = []
 
 #todo: modify stop_words
-ignore_words = ['?', '!']
+
+
+
+
 data_file = open('data.json').read()
 intents = json.loads(data_file)
 
@@ -24,9 +29,28 @@ intents = json.loads(data_file)
 for intent in intents['intents']:
     for pattern in intent['patterns']:
 
+        #lower case 
+        pattern = pattern.lower()
+
+        #remove contractions 
+        pattern = util.expand_contractions(pattern)
+
         #tokenize each word
+        #w list of tokens
         w = nltk.word_tokenize(pattern)
+
+        #correct any sentence spelling mistake
+        w = util.correct_spelling(w)
+
+        #remove stop words 
+        w = util.remove_stop_words(w)
+
+        # lemmatize and add similar words
+        w = util.generate_variations(w)
+
+        #add word to list of words 
         words.extend(w)
+
         #add documents in the corpus
         documents.append((w, intent['tag']))
 
@@ -35,7 +59,7 @@ for intent in intents['intents']:
             classes.append(intent['tag'])
 
 # lemmaztize and lower each word and remove duplicates
-words = [lemmatizer.lemmatize(w.lower()) for w in words if w not in ignore_words]
+print('after token ',words)
 words = sorted(list(set(words)))
 # sort classes
 classes = sorted(list(set(classes)))
