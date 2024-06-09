@@ -22,9 +22,7 @@ def clean_up_sentence(sentence):
 
 # return bag of words array: 0 or 1 for each word in the bag that exists in the sentence
 
-def bow(sentence, words, show_details=True):
-    # tokenize the pattern
-    sentence_words = clean_up_sentence(sentence)
+def bow(sentence_words, words, show_details=True):
     # bag of words - matrix of N words, vocabulary matrix
     bag = [0]*len(words)  
     for s in sentence_words:
@@ -37,24 +35,46 @@ def bow(sentence, words, show_details=True):
     return(np.array(bag))
 
 def predict_class(sentence, model):
+
+    # 1. tokenize ,
+    # 2. correct any spelling and grammar, 
+    # 3. lemmatize,
+    sentence_clean = clean_up_sentence(sentence)
+    print("sentence_clean",sentence_clean)
+
+    # 4.bag of words, once the msg is clean feed the bow with the sentence_clean
+    bag_of_words = bow(sentence_clean, words,show_details=False)
+    print("bag_of_words",bag_of_words)
+
+    # 5. convert to array 
+    # 6. feed the model 
+    model_prediction_result = model.predict(np.array([bag_of_words]))[0]
+
     # filter out predictions below a threshold
-    p = bow(sentence, words,show_details=False)
-    res = model.predict(np.array([p]))[0]
     ERROR_THRESHOLD = 0.25
-    results = [[i,r] for i,r in enumerate(res) if r>ERROR_THRESHOLD]
+    threshold_results = [[i,r] for i,r in enumerate(model_prediction_result) if r>ERROR_THRESHOLD]
+    
+    # 7. return list of intents and probability related to the msg
     # sort by strength of probability
-    results.sort(key=lambda x: x[1], reverse=True)
+    threshold_results.sort(key=lambda x: x[1], reverse=True)
+
+    #create a empty list to save results 
     return_list = []
-    for r in results:
+
+    #insert each result in the list 
+    for r in threshold_results:
         return_list.append({"intent": classes[r[0]], "probability": str(r[1])})
 
-
-    print("return_list",return_list)    
     return return_list
 
 def getResponse(ints, intents_json):
+    #extrat the intent, that is related to a specific tag [{'intent': 'greeting', 'probability': '0.99934894'}]
     tag = ints[0]['intent']
+
+    #load data.json file into list_of_intents
     list_of_intents = intents_json['intents']
+
+    #search in the data.json for the specific tag and pick a random response
     for i in list_of_intents:
         if(i['tag']== tag):
             result = random.choice(i['responses'])
@@ -62,9 +82,21 @@ def getResponse(ints, intents_json):
     return result
 
 def chatbot_response(msg):
+    #get the message, 
+    # 1. tokenize ,
+    # 2. correct any spelling and grammar, 
+    # 3. lemmatize,
+    # 4.bag of words, 
+    # 5. convert to array 
+    # 6. feed the model
+    # 7. return list of intents and probability related to the msg
     ints = predict_class(msg, model)
-    print("intex",ints)
+    print("intent related and probability --> ",ints)
+
+    #base on the intents (tags) result, pick first and get a random response
     res = getResponse(ints, intents)
+    print("show response picked -->",res)
+
     return res
 
 
