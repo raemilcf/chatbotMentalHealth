@@ -1,23 +1,48 @@
-import nltk
-nltk.download('popular')
-from nltk.stem import WordNetLemmatizer
-lemmatizer = WordNetLemmatizer()
 import pickle
 import numpy as np
-
-from keras.models import load_model
-model = load_model('model.h5')
 import json
 import random
+
+
+from keras.models import load_model
+from utils import util
+
+
+#load model
+model = load_model('model.h5')
+
+#load data and model files
 intents = json.loads(open('data.json').read())
 words = pickle.load(open('texts.pkl','rb'))
 classes = pickle.load(open('labels.pkl','rb'))
 
+
+
 def clean_up_sentence(sentence):
-    # tokenize the pattern - split words into array
-    sentence_words = nltk.word_tokenize(sentence)
-    # stem each word - create short form for word
-    sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
+
+    #lower all words 
+    sentence = sentence.lower()
+
+    #remove contractions 
+    sentence = util.expand_contractions(sentence)
+    print('contractions',sentence)
+
+    #tokenize words
+    sentence_words =util.tokenize_wrods(sentence)
+    print('tokens',sentence_words)
+
+    #correct any sentence spelling mistake
+    sentence_words = util.correct_spelling(sentence_words)
+    print('correct',sentence_words)
+
+    #remove stop words 
+    sentence_words = util.remove_stop_words(sentence_words)
+    print('stop words',sentence_words)
+
+    # lemmatize and add similar words
+    sentence_words = util.generate_variations(sentence_words)
+    print('generate_variations',sentence_words)
+
     return sentence_words
 
 # return bag of words array: 0 or 1 for each word in the bag that exists in the sentence
