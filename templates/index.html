@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Chatbot</title>
+  <title>Mental Health</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -16,7 +16,7 @@
   <section class="msger">
     <header class="msger-header">
       <div class="msger-header-title">
-        <i class="fas fa-bug"></i> Chatbot <i class="fas fa-bug"></i>
+         Alice, your Mental Health Assistant 
       </div>
     </header>
 
@@ -26,12 +26,12 @@
 
         <div class="msg-bubble">
           <div class="msg-info">
-            <div class="msg-info-name">Chatbot</div>
-            <div class="msg-info-time">12:45</div>
+            <div class="msg-info-name">Alice Chatbot</div>
+            <div class="msg-info-time" id="current-time"></div>
           </div>
 
           <div class="msg-text">
-            Hi, welcome to ChatBot! Go ahead and send me a message. 😄
+            Hello, I'm Alice your mental health assistant, you can ask me anything related to mental health, or talk with me if you prefer. ☺️
           </div>
         </div>
       </div>
@@ -55,7 +55,7 @@
     // Icons made by Freepik from www.flaticon.com
     const BOT_IMG = "https://image.flaticon.com/icons/svg/327/327779.svg";
     const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
-    const BOT_NAME = "    ChatBot";
+    const BOT_NAME = "Alice ChatBot";
     const PERSON_NAME = "You";
 
     msgerForm.addEventListener("submit", event => {
@@ -78,7 +78,7 @@
   <div class="msg-bubble">
     <div class="msg-info">
       <div class="msg-info-name">${name}</div>
-      <div class="msg-info-time">${formatDate(new Date())}</div>
+      <div class="msg-info-time">${getCurrentTime()}</div>
     </div>
 
     <div class="msg-text">${text}</div>
@@ -109,14 +109,15 @@
       return root.querySelector(selector);
     }
 
-    function formatDate(date) {
-      const h = "0" + date.getHours();
-      const m = "0" + date.getMinutes();
-
-      return `${h.slice(-2)}:${m.slice(-2)}`;
+    function getCurrentTime() {
+      var today = new Date();
+      var hours = today.getHours();
+      var minutes = today.getMinutes();
+      var timeFormat = hours + ":" + (minutes < 10 ? '0' : '') + minutes;
+      return timeFormat;
     }
 
-
+    document.getElementById('current-time').innerHTML = getCurrentTime();
 
   </script>
 
