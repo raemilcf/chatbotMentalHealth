@@ -81,6 +81,7 @@
     background-position: center;
     background-size: cover;
     border-radius: 50%;
+    background-image: url('alice_profile_photo_ai.jpg');
   }
   .msg-bubble {
     max-width: 450px;

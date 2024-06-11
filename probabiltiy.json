@@ -1,0 +1,39 @@
+{
+    "responses": [
+        {
+            "question": "hello",
+            "response": "hi",
+            "probability": "43.5"
+        },
+        {
+            "question": "Thank you ",
+            "response": "your welcome",
+            "probability": "43.5"
+        },
+        {
+            "question": "hello",
+            "response": "Hi there, how can I help?",
+            "probability": "0.99999976"
+        },
+        {
+            "question": "felling bad today",
+            "response": "Come Come elucidate your thoughts",
+            "probability": "0.7513679"
+        },
+        {
+            "question": "everything looks black ",
+            "response": "Come Come elucidate your thoughts",
+            "probability": "0.6683883"
+        },
+        {
+            "question": "want to die",
+            "response": "I'm very sorry to hear that but you have so much to look forward to. Please seek help by contacting: 9152987821.",
+            "probability": "0.96976435"
+        },
+        {
+            "question": "where can I get help",
+            "response": "Feeling comfortable with the professional you or your child is working with is critical to the success of the treatment. Finding the professional who best fits your needs may require research. Start by searching for providers in your area.",
+            "probability": "0.47505137"
+        }
+    ]
+}

@@ -2,6 +2,8 @@ import pickle
 import numpy as np
 import json
 import random
+import json
+
 
 
 from keras.models import load_model
@@ -106,6 +108,26 @@ def getResponse(ints, intents_json):
             break
     return result
 
+def updateJsonWithProbability(question, answer, probability):
+    # read Json File
+    with open('probabiltiy.json', 'r') as file:
+        data = json.load(file)
+
+    # create model to save in json
+    response = {
+        "question": question,
+        "response": answer,
+        "probability": probability
+    }
+
+    #add data to json
+    data['responses'].append(response)
+
+    # write file
+    with open('probabiltiy.json', 'w') as file:
+        json.dump(data, file, indent=4)
+
+
 def chatbot_response(msg):
     #get the message, 
     # 1. tokenize ,
@@ -114,13 +136,17 @@ def chatbot_response(msg):
     # 4.bag of words, 
     # 5. convert to array 
     # 6. feed the model
-    # 7. return list of intents and probability related to the msg
+    # 7. save response in file 
+    # 8. return list of intents and probability related to the msg
     ints = predict_class(msg, model)
     print("intent related and probability --> ",ints)
 
     #base on the intents (tags) result, pick first and get a random response
     res = getResponse(ints, intents)
     print("show response picked -->",res)
+
+    #save response 
+    updateJsonWithProbability(msg,res, ints[0]['probability'])
 
     return res
 
