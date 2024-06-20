@@ -363,14 +363,14 @@
     </div>
     <div class="chat-logs">
       <!-- put all the bubble message  -->
-      <div id="cm-msg-0" class="chat-msg self">
+      <div id="cm-msg-0" class="chat-msg bot">
         <div class="msg-avatar" >
           <img src="{{url_for('static', filename='img/chatbot/alice_profile_photo_ai.jpg')}}" />
         </div>
 
         <div class="cm-msg-text">
           <div class="msg-info">
-            <div class="msg-info-name">Alice Chatbot</div>
+            <div class="msg-info-name">Alice</div>
             <div class="msg-info-time" id="current-time"></div>
           </div>
 
@@ -384,7 +384,9 @@
   <div class="chat-input">      
     <form class="msger-inputarea">
       <input type="text" id="chat-input" placeholder="Send a message..."/>
-    <button type="submit" class="chat-submit" id="chat-submit"><i class="material-icons">send</i></button>
+    <button type="submit" class="chat-submit" id="chat-submit">
+      <i class="lni-enter"></i>
+    </button>
     </form>      
   </div>
 </div>
