@@ -159,11 +159,19 @@ app.static_folder = 'static'
 def home():
     return render_template("index.html")
 
-@app.route("/get")
+@app.route("/get", methods=["GET"])
 def get_bot_response():
     userText = request.args.get('msg')
-    return chatbot_response(userText)
+    if userText:
+            try:
+                response = chatbot_response(userText)
+                return response
+            except Exception as e:
+                return f"An error occurred: {str(e)}", 500
+    else:
+        return "No message provided", 400
 
 
 if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0', port=4900)
     app.run()
