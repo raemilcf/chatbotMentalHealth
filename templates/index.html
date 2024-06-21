@@ -1,125 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="Bootstrap, Landing page, Template, Business, Service">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Grayrids">
+    <title>AI for Emotional Wellbeing </title>
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="{{url_for('static', filename='imge/favico.png')}}" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/animate.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/LineIcons.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/owl.theme.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/nivo-lightbox.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/responsive.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/chatbot.css')}}">
 
-<head>
-  <meta charset="UTF-8">
-  <title>Chatbot</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
+  
 
-<body>
-  <!-- partial:index.partial.html -->
-  <section class="msger">
-    <header class="msger-header">
-      <div class="msger-header-title">
-        <i class="fas fa-bug"></i> Chatbot <i class="fas fa-bug"></i>
+  </head>
+  
+  <body>
+
+    <!-- Header Section Start -->
+    <header id="home" class="hero-area">    
+      <div class="overlay">
+        <span></span>
+        <span></span>
       </div>
+      <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
+        <div class="container">
+          <a href="index.html" class="navbar-brand"><img width="50" height="50" src="{{url_for('static', filename='img/logoHealth.png')}}" alt=""></a>   
+
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="lni-menu"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#services">Mental Health</a>
+              </li>  
+                    
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#aboutus">About Us</a>
+              </li> 
+            </ul>
+          </div>
+        </div>
+      </nav>  
+      <div class="container">      
+        <div class="row space-100">
+          <div class="col-lg-6 col-md-12 col-xs-12">
+            <div class="contents">
+              <h2 class="head-title">You are Using Free Lite Version</h2>
+              <p>Please, Purchase full version of Slick to get all pages, features and permission to use in commercial projects</p>
+              <div class="header-button">
+                <a href="https://rebrand.ly/slick-ud" rel="nofollow" target="_blank" class="btn btn-border-filled">Purchase Now</a>
+                <a href="https://rebrand.ly/slick-ud" rel="nofollow" target="_blank" class="btn btn-border page-scroll">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-xs-12 p-0">
+            <div class="intro-img">
+              <img src="{{url_for('static', filename='img/home.jpg')}}" alt="">
+            </div>            
+          </div>
+        </div> 
+      </div>             
     </header>
+    <!-- Header Section End --> 
 
-    <main class="msger-chat">
-      <div class="msg left-msg">
-        <div class="msg-img" style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"></div>
 
-        <div class="msg-bubble">
+    <!-- Services Section Start -->
+    <section id="services" class="section">
+      <div class="container">
+
+        <div class="row">
+          <!-- Start Col -->
+          <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="services-item text-center">
+              <div class="icon">
+                <i class="lni-cog"></i>
+              </div>
+              <h4>Bootstrap 4</h4>
+              <p>Share processes and data secure lona need to know basis Our team assured your web site is always safe.</p>
+            </div>
+          </div>
+          <!-- End Col -->
+          <!-- Start Col -->
+          <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="services-item text-center">
+              <div class="icon">
+                <i class="lni-brush"></i>
+              </div>
+              <h4>Slick Design</h4>
+              <p>Share processes and data secure lona need to know basis Our team assured your web site is always safe.</p>
+            </div>
+          </div>
+          <!-- End Col -->
+          <!-- Start Col -->
+          <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="services-item text-center">
+              <div class="icon">
+                <i class="lni-heart"></i>
+              </div>
+              <h4>Crafted with Love</h4>
+              <p>Share processes and data secure lona need to know basis Our team assured your web site is always safe.</p>
+            </div>
+          </div>
+          <!-- End Col -->
+
+        </div>
+      </div>
+    </section>
+    <!-- Services Section End -->
+
+
+
+    <!-- Business Plan Section Start -->
+    <section id="business-plan">
+      <div class="container">
+
+        <div class="row">
+          <!-- Start Col -->
+          <div class="col-lg-6 col-md-12 pl-0 pt-70 pr-5">
+            <div class="business-item-img">
+              <img src="img/business/business-img.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          <!-- End Col -->
+          <!-- Start Col -->
+          <div class="col-lg-6 col-md-12 pl-4">
+            <div class="business-item-info">
+              <h3>Crafted For Business, Startup and Agency Websites</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br> veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <br> commodo consequat. Duis aute irure dolor in reprehenderit in voluptate <br> velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+              <a class="btn btn-common" href="#">download</a>
+            </div>
+          </div>
+          <!-- End Col -->
+
+        </div>
+      </div>
+    </section>
+    <!-- Business Plan Section End -->
+
+
+    <!-- Team section Start -->
+    <section id="aboutus" class="section">
+      <div class="container">
+        <!-- Start Row -->
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="aboutus-text section-header text-center">  
+              <div>   
+                <h2 class="section-title">Team Members</h2>
+                <div class="desc-text">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>  
+                  <p>eiusmod tempor incididunt ut labore et dolore.</p>
+                </div>
+              </div> 
+            </div>
+          </div>
+
+        </div>
+        <!-- End Row -->
+        <!-- Start Row -->
+        <div class="row">
+          <!-- Start Col -->
+          <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="single-aboutus">
+              <div class="aboutus-thumb">
+                <img src="img/team/01.jpg" class="img-fluid" alt="">
+              </div>
+
+              <div class="aboutus-details">
+              <div class="aboutus-social-icons">
+                  <ul class="social-list">
+                    <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
+                    <li><a href="#"><i class="lni-twitter-filled"></i></a></li>
+                    <li><a href="#"><i class="lni-google-plus"></i></a></li>
+                  </ul>
+                </div> 
+                <div class="aboutus-inner text-center">
+                  <h5 class="aboutus-title">Patric Green</h5>
+                  <p>Lead Designer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Start Col -->
+ 
+          <!-- Start Col -->
+          <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="single-aboutus">
+              <div class="aboutus-thumb">
+                <img src="img/team/02.jpg" class="img-fluid" alt="">
+              </div>
+
+              <div class="aboutus-details">
+              <div class="aboutus-social-icons">
+                  <ul class="social-list">
+                    <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
+                    <li><a href="#"><i class="lni-twitter-filled"></i></a></li>
+                    <li><a href="#"><i class="lni-google-plus"></i></a></li>
+                  </ul>
+                </div>
+                <div class="aboutus-inner text-center">
+                  <h5 class="aboutus-title">Celina D Cruze</h5>
+                  <p>Front-end Developer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Start Col -->
+ 
+          <!-- Start Col -->
+          <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="single-aboutus">
+              <div class="aboutus-thumb">
+                <img src="img/team/03.jpg" class="img-fluid" alt="">
+              </div>
+
+              <div class="aboutus-details">
+              <div class="aboutus-social-icons">
+                  <ul class="social-list">
+                    <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
+                    <li><a href="#"><i class="lni-twitter-filled"></i></a></li>
+                    <li><a href="#"><i class="lni-google-plus"></i></a></li>
+                  </ul>
+                </div>
+                <div class="aboutus-inner text-center">
+                  <h5 class="aboutus-title">Daryl Dixon</h5>
+                  <p>Content Writer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Start Col -->
+ 
+          <!-- Start Col -->
+          <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="single-aboutus">
+              <div class="aboutus-thumb">
+                <img src="img/team/04.jpg" class="img-fluid" alt="">
+              </div>
+
+              <div class="aboutus-details">
+                <div class="aboutus-social-icons">
+                  <ul class="social-list">
+                    <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
+                    <li><a href="#"><i class="lni-twitter-filled"></i></a></li>
+                    <li><a href="#"><i class="lni-google-plus"></i></a></li>
+                  </ul>
+                </div>
+                <div class="aboutus-inner text-center">
+                  <h5 class="aboutus-title">Mark Parker</h5>
+                  <p>Support Engineer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Start Col -->
+            <!-- Start Col -->
+          <div class="col-lg-3 col-md-6 col-xs-12">
+            <div class="single-aboutus">
+              <div class="aboutus-thumb">
+                <img src="img/team/04.jpg" class="img-fluid" alt="">
+              </div>
+
+              <div class="aboutus-details">
+                <div class="aboutus-social-icons">
+                  <ul class="social-list">
+                    <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
+                    <li><a href="#"><i class="lni-twitter-filled"></i></a></li>
+                    <li><a href="#"><i class="lni-google-plus"></i></a></li>
+                  </ul>
+                </div>
+                <div class="aboutus-inner text-center">
+                  <h5 class="aboutus-title">Mark Parker</h5>
+                  <p>Support Engineer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Start Col -->
+ 
+
+        </div>
+        <!-- End Row -->
+      </div>
+    </section>
+    <!-- Team section End -->
+
+
+   
+
+    <!-- Footer Section Start -->
+    <footer>
+      <!-- Footer Area Start -->
+      <section id="footer-Content">
+      
+        <!-- Copyright Start  -->
+
+        <div class="copyright">
+          <div class="container">
+            <!-- Star Row -->
+            <div class="row">
+              <div class="col-md-12">
+                <div class="site-info text-center">
+                  <p>Mental Health Mavericks  </p>
+                </div>              
+                
+              </div>
+              <!-- End Col -->
+            </div>
+            <!-- End Row -->
+          </div>
+        </div>
+      <!-- Copyright End -->
+      </section>
+      <!-- Footer area End -->
+      
+    </footer>
+    <!-- Footer Section End --> 
+
+
+    <!-- Go To Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="lni-chevron-up"></i>
+    </a> 
+
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader" id="loader-1"></div>
+    </div>
+    <!-- End Preloader -->
+
+    <!-- begin chat bot -->
+    <div id="chat-circle" class="btn btn-raised" style="font-size: 24px !important;">
+      <div id="chat-overlay"></div>
+      <i class="lni-wechat"></i>
+    </div>
+
+<div class="chat-box">
+  <div class="chat-box-header">
+    Alice, your Mental Health Assistant 
+    <span class="chat-box-toggle"> <i class="lni-close"></i></span>
+  </div>
+  <div class="chat-box-body">
+    <div class="chat-box-overlay">   
+    </div>
+    <div class="chat-logs">
+      <!-- put all the bubble message  -->
+      <div id="cm-msg-0" class="chat-msg bot">
+        <div class="msg-avatar" >
+          <img src="{{url_for('static', filename='img/chatbot/alice_profile_photo_ai.jpg')}}" />
+        </div>
+
+        <div class="cm-msg-text">
           <div class="msg-info">
-            <div class="msg-info-name">Chatbot</div>
-            <div class="msg-info-time">12:45</div>
+            <div class="msg-info-name">Alice</div>
+            <div class="msg-info-time" id="current-time"></div>
           </div>
 
           <div class="msg-text">
-            Hi, welcome to ChatBot! Go ahead and send me a message. 😄
+            Hello, I'm Alice your mental health assistant, you can ask me anything related to mental health, or talk with me if you prefer. ☺️
           </div>
         </div>
       </div>
-
-    </main>
-
+    </div><!--chat-log -->
+  </div>
+  <div class="chat-input">      
     <form class="msger-inputarea">
-      <input type="text" class="msger-input" id="textInput" placeholder="Enter your message...">
-      <button type="submit" class="msger-send-btn">Send</button>
-    </form>
-  </section>
-  <!-- partial -->
-  <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
-  <script>
-
-    const msgerForm = get(".msger-inputarea");
-    const msgerInput = get(".msger-input");
-    const msgerChat = get(".msger-chat");
-
-
-    // Icons made by Freepik from www.flaticon.com
-    const BOT_IMG = "https://image.flaticon.com/icons/svg/327/327779.svg";
-    const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
-    const BOT_NAME = "    ChatBot";
-    const PERSON_NAME = "You";
-
-    msgerForm.addEventListener("submit", event => {
-      event.preventDefault();
-
-      const msgText = msgerInput.value;
-      if (!msgText) return;
-
-      appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
-      msgerInput.value = "";
-      botResponse(msgText);
-    });
-
-    function appendMessage(name, img, side, text) {
-      //   Simple solution for small apps
-      const msgHTML = `
-<div class="msg ${side}-msg">
-  <div class="msg-img" style="background-image: url(${img})"></div>
-
-  <div class="msg-bubble">
-    <div class="msg-info">
-      <div class="msg-info-name">${name}</div>
-      <div class="msg-info-time">${formatDate(new Date())}</div>
-    </div>
-
-    <div class="msg-text">${text}</div>
+      <input type="text" id="chat-input" placeholder="Send a message..."/>
+    <button type="submit" class="chat-submit" id="chat-submit">
+      <i class="lni-enter"></i>
+    </button>
+    </form>      
   </div>
 </div>
-`;
+<!-- end chatbot -->
 
-      msgerChat.insertAdjacentHTML("beforeend", msgHTML);
-      msgerChat.scrollTop += 500;
-    }
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="{{ url_for('static', filename='js/jquery-min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.nav.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scrolling-nav.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.easing.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/nivo-lightbox.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/form-validator.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/contact-form-script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
 
-    function botResponse(rawText) {
-
-      // Bot Response
-      $.get("/get", { msg: rawText }).done(function (data) {
-        console.log(rawText);
-        console.log(data);
-        const msgText = data;
-        appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
-
-      });
-
-    }
-
-
-    // Utils
-    function get(selector, root = document) {
-      return root.querySelector(selector);
-    }
-
-    function formatDate(date) {
-      const h = "0" + date.getHours();
-      const m = "0" + date.getMinutes();
-
-      return `${h.slice(-2)}:${m.slice(-2)}`;
-    }
-
-
-
-  </script>
-
-</body>
-
+  </body>
 </html>
