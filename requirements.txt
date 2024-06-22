@@ -5,5 +5,4 @@ tensorflow
 nltk 
 inflect
 autocorrect
-gevent
 Gunicorn
