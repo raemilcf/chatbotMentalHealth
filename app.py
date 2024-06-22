@@ -145,7 +145,7 @@ def chatbot_response(msg):
     print("show response picked -->",res)
 
     #save response 
-    updateJsonWithProbability(msg,res, ints[0]['probability'])
+    # updateJsonWithProbability(msg,res, ints[0]['probability'])
 
     return res
 
