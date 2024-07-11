@@ -5,6 +5,4 @@ tensorflow
 nltk 
 inflect
 autocorrect
-json
-random
 Gunicorn

@@ -363,8 +363,14 @@ button:focus {
 
 /* ==========================================================================
    Navbar Style
+
    ========================================================================== */
-.logo-menu a {
+
+.navbar{
+  background-color: #f9f9f9;
+}
+
+   .logo-menu a {
   font-size: 20px;
   color: #333333; }
 
@@ -529,20 +535,22 @@ button:focus {
 /* ==========================================================================
    About 
    ========================================================================== */
-#services .services-item {
+#services {
+    background: #f9f9f9; }
+  #services .services-item {
   padding: 60px 30px;
   border: 1px solid #ddd;
   -moz-transition: all .8s ease;
   -webkit-transition: all .8s ease;
   transition: all .8s ease; }
   #services .services-item:hover {
-    border: 1px solid #3ecf8e;
+    border: 1px solid #5A5EB9;
     box-shadow: 0px 0px 25px 0px rgba(95, 95, 95, 0.24);
     -moz-transition: all .4s ease;
     -webkit-transition: all .4s ease;
     transition: all .4s ease; }
   #services .services-item .icon {
-    background: #e3fff2;
+    background: #bdbfe2;
     width: 110px;
     height: 110px;
     margin: 0px auto;
@@ -554,7 +562,7 @@ button:focus {
     margin-bottom: 25px; }
   #services .services-item .icon i {
     font-size: 40px;
-    color: #3ecf8e;
+    color: #5A5EB9;
     position: absolute;
     left: 0;
     right: 0;
@@ -567,7 +575,7 @@ button:focus {
   #services .services-item p {
     font-size: 16px;
     margin-bottom: 10px;
-    color: #5e629c; }
+    color: #a5a7c6; }
 
 /* ==========================================================================
    business-plan Section 
@@ -1033,7 +1041,9 @@ button:focus {
 /* ==========================================================================
    aboutus section
    ========================================================================== */
-#aboutus .single-aboutus {
+#aboutus {
+    background: #f9f9f9; }
+  #aboutus .single-aboutus {
   border: 1px solid #ddd;
   position: relative;
   -moz-transition: all .8s ease;
@@ -1058,10 +1068,10 @@ button:focus {
       margin: 4px;
       background: #fff; }
     #aboutus .single-aboutus .aboutus-social-icons ul.social-list li:hover {
-      background: #3ecf8e;
+      background: #5A5EB9;
       -moz-transition: all .4s ease;
       -webkit-transition: all .4s ease;
-      border-color: #3ecf8e;
+      border-color: #5A5EB9;
       transition: all .4s ease; }
     #aboutus .single-aboutus .aboutus-social-icons ul.social-list li:hover a {
       display: block; }
@@ -1071,7 +1081,7 @@ button:focus {
       -webkit-transition: all .4s ease;
       transition: all .4s ease; }
     #aboutus .single-aboutus .aboutus-social-icons ul.social-list li a i {
-      color: #3ecf8e;
+      color: #5A5EB9;
       font-size: 16px; }
   #aboutus .single-aboutus:hover {
     box-shadow: 0px 0px 25px 0px rgba(95, 95, 95, 0.24);
@@ -1408,7 +1418,7 @@ button:focus {
     padding-top: 30px;
     padding-bottom: 30px; }
     #footer-Content .copyright p {
-      color: #3ecf8e;
+      color: #fff;
       font-size: 18px; }
     #footer-Content .copyright a {
       color: #ddd; }
