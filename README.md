@@ -17,3 +17,16 @@ Resources:
 Template:
 https://uideck.com/templates/slick-free-bootstrap-template
 
+
+Please install before run:
+python3 -m venv .venv
+pip3 install python
+pip install nltk 
+pip install numpy 
+pip install keras
+pip install tensorflow
+pip install inflect
+pip install autocorrect
+pip install flask
+
+
