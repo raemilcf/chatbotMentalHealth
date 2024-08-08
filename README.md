@@ -19,7 +19,7 @@ The primary goal of this project is to create a scalable solution for improving 
 
 Participation on the Stem fellowship: Poster Presentation
 
-![IMG_9426](https://github.com/user-attachments/assets/ed06fa66-2d55-4389-a6ee-58d8a5f637d8)
+![WhatsApp Image 2024-08-08 at 9 21 07 AM](https://github.com/user-attachments/assets/61b25b21-f022-44dc-b091-bb354acdf8d8)
 
 
 ![Chatbhot images](https://github.com/raemilcf/chatbotMentalHealth/assets/169390034/6446d3a6-4ed0-4a69-9c82-04406569edff)
