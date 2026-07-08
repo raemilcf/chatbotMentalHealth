@@ -1,23 +1,41 @@
-# AI for emotional wellbeing: Designing an NLP-Based mental health chatbot	
-### Team: Mental Health Mavericks
+# AI for Emotional Wellbeing: NLP-Based Mental Health Chatbot
 
-This project was developed as part of the research initiative "Leveraging Open Data Analytics and Machine Learning to Improve Mental Health Research and Innovation" during the 2024 Inter-University Big Data Challenge, organized by Stem Fellowship.
-https://journal.stemfellowship.org/doi/10.17975/sfj-2024-010
+An NLP chatbot that provides real-time emotional support, built as a finalist submission for the 2024 Inter-University Big Data Challenge (Stem Fellowship).
 
-#### Overview
-Mental health is an important element of overall well-being, but many people continue to have inadequate access to mental health services. The increasing prevalence of mental health concerns highlights the importance of accessible and scalable remedies. Artificial intelligence (AI) and natural language processing (NLP) offer a unique chance to address this gap by delivering immediate emotional assistance via chatbots. These chatbots use advanced machine learning techniques such as neural networks with Stochastic Gradient Descent (SGD) and Bidirectional Encoder Representations from Transformers (BERT) to identify and reply to user inputs with empathy and accuracy. This study focuses on creating an NLP-based chatbot to improve mental health by providing strong and consistent emotional support.
-Stem Fellowship project
+📄 Published research: [journal.stemfellowship.org](https://journal.stemfellowship.org/doi/10.17975/sfj-2024-010)
+👥 Team: Mental Health Mavericks
 
-#### Key Features
-Advanced AI Techniques: Utilizes state-of-the-art machine learning methods, including neural networks with Stochastic Gradient Descent (SGD) to deliver accurate and empathetic responses.
-High Accuracy: Achieved an impressive accuracy of 86% on the test set, demonstrating the chatbot’s ability to effectively understand and respond to user inputs.
-Optimized Performance: Hyperparameter tuning was applied to enhance the model’s performance, ensuring robust and consistent emotional support.
+## Overview
 
-#### Purpose
-The primary goal of this project is to create a scalable solution for improving mental health support using AI-driven technologies. By integrating sophisticated NLP techniques, the chatbot aims to offer a reliable and accessible resource for those in need of emotional assistance, helping to mitigate the challenges associated with accessing traditional mental health services.
+Many people lack access to timely mental health support. This project explores whether AI/NLP can help close that gap — a chatbot that responds to emotional input with empathy and accuracy, using neural networks (SGD) and BERT-based techniques.
+
+## Key Results
+
+- **86% accuracy** on the test set
+- Hyperparameter tuning applied for consistent, robust responses
+- Presented as a poster at the Inter-University Big Data Challenge
+
+## Tech Stack
+
+Python · NLTK · Keras · TensorFlow · Flask
+
+## Getting Started
+
+- \`\`\`bash
+- python3 -m venv .venv
+- source .venv/bin/activate
+- pip install nltk numpy keras tensorflow inflect autocorrect flask
+- python app.py
+- \`\`\`
+
+## Credits
+
+Built by the Mental Health Mavericks team for the "Leveraging Open Data Analytics and Machine Learning to Improve Mental Health Research and Innovation" initiative, organized by Stem Fellowship.
+
+Front-end template: [UIdeck Slick Bootstrap Template](https://uideck.com/templates/slick-free-bootstrap-template)
 
 
-Participation on the Stem fellowship: Poster Presentation
+## Participation on the Stem fellowship: Poster Presentation
 
 ![WhatsApp Image 2024-08-08 at 9 21 07 AM](https://github.com/user-attachments/assets/61b25b21-f022-44dc-b091-bb354acdf8d8)
 
@@ -26,24 +44,5 @@ Participation on the Stem fellowship: Poster Presentation
 
 
 
-
-
-
-
-Resources:
-Template:
-https://uideck.com/templates/slick-free-bootstrap-template
-
-
-Please install before run:
-python3 -m venv .venv
-pip3 install python
-pip install nltk 
-pip install numpy 
-pip install keras
-pip install tensorflow
-pip install inflect
-pip install autocorrect
-pip install flask
 
 
